@@ -44,14 +44,28 @@ bot.on('interaction', async interaction => {
 });
 //Add Role And Welcome New Member
 bot.on('guildMemberAdd', member => {
-  
-});
+  bot.user.setActivity("with b>help on " + bot.guilds.cache.size + " servers with " + bot.users.cache.size + " users in total", {type: "PLAYING"});
 
+});
+bot.on("guildCreate", guild => {
+  console.log("Joined a new guild: " + guild.name);
+  bot.user.setActivity("with b>help on " + bot.guilds.cache.size + " servers with " + bot.users.cache.size + " users in total", {type: "PLAYING"});
+
+  //Your other stuff like adding to guildArray
+})
+
+//removed from a server
+bot.on("guildDelete", guild => {
+  console.log("Left a guild: " + guild.name);
+  bot.user.setActivity("with b>help on " + bot.guilds.cache.size + " servers with " + bot.users.cache.size + " users in total", {type: "PLAYING"});
+
+  //remove from guildArray
+})
 //Playing Message
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.cache.size} servers!`);
 
-  bot.user.setActivity("b>help", {type: "PLAYING"});
+  bot.user.setActivity("with b>help on " + bot.guilds.cache.size + " servers with " + bot.users.cache.size + " users in total", {type: "PLAYING"});
 });
 
 //Command Manager
