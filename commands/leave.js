@@ -32,7 +32,6 @@ else
     .setAuthor( message.author.username, message.author.avatarURL, "")
     .setDescription('Attempted by <@!' + message.author.id + '> ')
     .setThumbnail('https://thumbs.gfycat.com/AcclaimedHeartfeltGoat-size_restricted.gif')
-    .addField( 'Uptime: ',client.uptime)
     .setImage("https://f0.pngfuel.com/png/948/630/pirate-signage-illustration-png-clip-art.png")
     .setTimestamp()
     .setFooter('Biko', 'https://cdn.discordapp.com/avatars/701541481944711248/16e12aa7d21f5c29309f98681c5ef3b1.png?size=256');

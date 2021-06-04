@@ -23,7 +23,6 @@ module.exports.run  = function(client, message, args){
             .setAuthor( message.author.username, message.author.avatarURL,""    )
             .setDescription('User Request by <@!' + message.author.id + '> ')
             .setThumbnail('https://thumbs.gfycat.com/AcclaimedHeartfeltGoat-size_restricted.gif')
-            .addField( 'Uptime: ',client.uptime)
             .setImage("https://thumbs.gfycat.com/AcclaimedHeartfeltGoat-size_restricted.gif")
             .setTimestamp()
             .setFooter('Biko', 'https://cdn.discordapp.com/avatars/701541481944711248/16e12aa7d21f5c29309f98681c5ef3b1.png?size=256');

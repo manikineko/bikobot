@@ -51,7 +51,7 @@ bot.on('guildMemberAdd', member => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.cache.size} servers!`);
 
-  bot.user.setActivity("-biko help", {type: "PLAYING"});
+  bot.user.setActivity("b>help", {type: "PLAYING"});
 });
 
 //Command Manager
