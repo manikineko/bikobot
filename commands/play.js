@@ -1,6 +1,6 @@
 const ytdl = require('ytdl-core');
 const Discord = require('discord.js');
-exports.run = function(client,message){
+module.exports.run  = function(client, message, args){
     var args = message.content.split(" ");
     const streamOptions = { seek: 0, volume: 1 };
     var voiceChannel = message.member.voice.channel;
@@ -32,3 +32,7 @@ exports.run = function(client,message){
             message.channel.send(args[2])
             message.delete();
 }
+module.exports.help = {
+    name:"play"
+  }
+  

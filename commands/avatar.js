@@ -1,5 +1,5 @@
 const { MessageEmbed } = require("discord.js");
-exports.run = function(bot,message,args){
+module.exports.run = function(bot,message,args){
     let Embed = new MessageEmbed();
     let roles = [];
     if (!message.mentions.users.first()) {
@@ -21,3 +21,7 @@ exports.run = function(bot,message,args){
       return message.channel.send(Embed);
     }
   };
+  module.exports.help = {
+    name:"avatar"
+  }
+  
