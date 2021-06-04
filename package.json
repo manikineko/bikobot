@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
-    "discord.js": "^12.3.1",
+    "discord-together": "^1.1.14",
+    "discord.js": "github:monbrey/discord.js#message-components",
+    "discord.js-v13": "^13.0.1",
     "ffmpeg": "0.0.4",
     "fluent-ffmpeg": "^2.1.2",
     "ytdl-core": "^3.2.2"
