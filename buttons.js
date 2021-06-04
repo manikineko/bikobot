@@ -28,12 +28,15 @@ const voiceChannel = member.voice.channel;
 			);
       
       await interaction.update('A button was clicked!', { components: [row] });
+     break;
       case "youtube":
         if(member.voice.channel){
         client.discordTogether.createTogetherCode(member.voice.channel.id, 'youtube').then(async invite => {
           await interaction.update(`${invite.code}`);
         });
+        break;
       }
+    
         case "poker":
           if(member.voice.channel){
           client.discordTogether.createTogetherCode(member.voice.channel.id, 'poker').then(async invite => {
@@ -44,17 +47,20 @@ const voiceChannel = member.voice.channel;
           interaction.channel.send(`<@${member.id}> your not in an voice channel`).then(msg => {
             setTimeout(() => msg.delete(), 1000)
           })
+          break;
         }
         case "chess":
           if(member.voice.channel){
           client.discordTogether.createTogetherCode(member.voice.channel.id, 'chess').then(async invite => {
             await interaction.update(`${invite.code}`);
           });
+          break;
         }
         else{
           interaction.channel.send(`<@${member.id}> your not in an voice channel`).then(msg => {
             setTimeout(() => msg.delete(), 1000)
           })
+          break;
         }
         case "betrayal":
           if(member.voice.channel){
@@ -67,6 +73,7 @@ const voiceChannel = member.voice.channel;
               setTimeout(() => msg.delete(), 1000)
             })
           }
+          break;
         case "fishing":
           if(member.voice.channel){
               client.discordTogether.createTogetherCode(member.voice.channel.id, 'fishing').then(async invite => {
@@ -78,5 +85,6 @@ const voiceChannel = member.voice.channel;
                 setTimeout(() => msg.delete(), 1000)
               })
             }
+            break;
           }
 }
