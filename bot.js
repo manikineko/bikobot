@@ -33,6 +33,7 @@ bot.on('interaction', async interaction => {
 	if (interaction.isMessageComponent() && interaction.componentType == 'BUTTON')
   {
     await buttons.buttonresponce(bot,interaction);
+      
   }
     else
     {
@@ -44,7 +45,6 @@ bot.on('interaction', async interaction => {
 });
 //Add Role And Welcome New Member
 bot.on('guildMemberAdd', member => {
-  bot.user.setActivity("with b>help on " + bot.guilds.cache.size + " servers with " + bot.users.cache.size + " users in total", {type: "PLAYING"});
 
 });
 bot.on("guildCreate", guild => {
@@ -70,21 +70,26 @@ bot.on("ready", async () => {
 
 //Command Manager
 bot.on("message", async message => {
-  
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
+ 
 
-  let prefix = config.prefix;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-  
+  try{
+   let prefix = config.prefix;
+    let messageArray = message.content.split(" ");
+    let cmd = messageArray[0];
+    let args = messageArray.slice(1);
   //Check for prefix
-  if(!cmd.startsWith(config.prefix)) return;
-  
+  if(cmd.startsWith(config.prefix) && !message.author.bot && message.channel.type != "dm"){
+
+ 
+    
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
-
+    
+}
+  }
+  catch(e){
+    message.reply(`Error ${e}!`)
+  }
 });
 //Token need in token.json
 bot.login(token.token);
