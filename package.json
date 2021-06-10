@@ -10,11 +10,15 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
+    "discord-interactions": "^2.1.0",
     "discord-together": "^1.1.14",
-    "discord.js": "github:monbrey/discord.js#message-components",
-    "discord.js-v13": "^13.0.1",
-    "ffmpeg": "0.0.4",
+    "discord.js": "^13.0.0-dev.e980948de55e91e59c9e3293ac76bc645a058a53",
+    "ffmpeg": "^0.0.4",
     "fluent-ffmpeg": "^2.1.2",
-    "ytdl-core": "^3.2.2"
+    "gifify": "^2.4.3",
+    "gifit": "^0.0.3",
+    "pastebin-ts": "^1.2.0",
+    "youtube.com": "^1.1.0",
+    "ytdl-core": "^4.8.2"
   }
 }
