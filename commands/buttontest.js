@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
 					.setStyle('PRIMARY'),
 			);
      
-               message.channel.send("Test	", { components: [row] });
+			message.channel.send({content: "Test", components: [row] });
                message.delete();
 }
 

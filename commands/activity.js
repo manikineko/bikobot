@@ -25,8 +25,8 @@ module.exports.run = async (bot, message, args) => {
 					.setLabel('📺Youtube📺')
 					.setStyle('PRIMARY'),
 			);
-     
-               message.channel.send("What activity do you wana play?", { components: [row] });
+			message.channel.send({content: "What activity do you wana play?", components: [row] });
+               //message.channel.send("What activity do you wana play?", { components: [row] });
 			   message.delete();
 			
 }

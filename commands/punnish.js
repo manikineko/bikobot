@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const { MessageActionRow, MessageButton } = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
-  const row = new MessageActionRow()
+  /*const row = new MessageActionRow()
 			.addComponents(
 				new MessageButton()
 					.setCustomID('delmsg')
@@ -21,9 +21,18 @@ module.exports.run = async (bot, message, args) => {
 					.setLabel('🔒Lock Down Channel🔒')
 					.setStyle('PRIMARY'),
 			);
-     
-               message.channel.send("Witch punnishment action do you wana do?", { components: [row] });
-               message.delete();
+    */
+			const row = new MessageActionRow()
+			.addComponents(
+				new MessageButton()
+					.setCustomID('delmsg')
+					.setLabel('OK')
+					.setStyle('DANGER')
+			); 
+              //message.channel.send({content: "Witch punnishment action do you wana do?", components: [row] });
+              message.channel.send({content: "Command Disabled", components: [row] });
+              
+			  message.delete();
 }
 
 module.exports.help = {
