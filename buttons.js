@@ -8,7 +8,7 @@ bot.commands = new Discord.Collection();
 const { MessageActionRow, MessageButton,MessageAttachment} = require('discord.js');
 const { DiscordTogether } = require('discord-together');
 const buttonresponce = require("./buttons");
-var Youtube = require("ytdl-core");
+//var Youtube = require("ytdl-core");
 module.exports.buttonresponce = async function(client,interaction)
 {
 const guild =interaction.guild;

@@ -1,14 +1,26 @@
 {
-  "name": "biko",
+  "name": "bikobot",
   "version": "1.0.0",
-  "description": "",
+  "description": "AI Overlords are here be ready",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloomsirenix/modbot.git"
+  },
+  "author": "Bloom Sirenix#6090",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bloomsirenix/modbot/issues"
+  },
+  "homepage": "https://github.com/bloomsirenix/modbot#readme",
   "dependencies": {
+    "@google-cloud/speech": "^4.2.0",
+    "axios": "^0.21.1",
+    "deepai": "^1.0.17",
+    "discord-anti-spam": "^2.5.0",
     "@discordjs/opus": "^0.3.2",
     "discord-interactions": "^2.1.0",
     "discord-together": "^1.1.14",
@@ -18,7 +30,7 @@
     "gifify": "^2.4.3",
     "gifit": "^0.0.3",
     "pastebin-ts": "^1.2.0",
-    "youtube.com": "^1.1.0",
-    "ytdl-core": "^4.8.2"
+    "node-virustotal": "^3.32.0",
+    "perspective-api-client": "^3.1.0"
   }
 }

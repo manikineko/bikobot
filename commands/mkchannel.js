@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 module.exports.run  = function(client,message,args){
-  if(message.guild.members.fetch(message.author.id).hasPermission('MANAGE_CHANNELS')||message.guild.members.fetch(message.author.id).hasPermission('ADMINISTRATOR')){
+  if(message.guild.members.resolve(message.author.id).permissions.has('MANAGE_CHANNELS')||message.guild.members.resolve(message.author.id).permissions.has('ADMINISTRATOR')){
 
 if(args.length >= 1){
   message.guild.channels.create(args[0],{
@@ -15,13 +15,13 @@ if(args.length >= 1){
 }
 else
 {
-  message.reply("⚠️Channel Made⚠️").delete({ timeout: 10000,reason:"[Automated Message Deletion]" });
+  message.reply("⚠️Channel Made⚠️");
 }
-message.reply("🪄Channel Made🪄").delete({ timeout: 10000,reason:"[Automated Message Deletion]" });
+message.reply("🪄Channel Made🪄");
 }
 else
 {
-  message.reply("🚫Access Denied🚫").delete({ timeout: 10000,reason:"[Automated Message Deletion]" });
+  message.reply("🚫Access Denied🚫");
 }
 /*
 message.channel.edit({

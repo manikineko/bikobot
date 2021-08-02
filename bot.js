@@ -70,8 +70,8 @@ bot.on("ready", async () => {
 
 //Command Manager
 bot.on("message", async message => {
- 
 
+console.log(`${message.author.username}(${message.author.id})/${message.id}: ${message.content}`);
   try{
    let prefix = config.prefix;
     let messageArray = message.content.split(" ");
@@ -88,7 +88,7 @@ bot.on("message", async message => {
 }
   }
   catch(e){
-    message.reply(`Error ${e}!`)
+    message.channel.send(`<@${message.author.id}> Error ${e}!`)
   }
 });
 //Token need in token.json
