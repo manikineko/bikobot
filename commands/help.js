@@ -122,35 +122,35 @@ module.exports.help = {
         message.author.displayAvatarURL()
       );
     let button1 = new MessageButton()
-      .setLabel(``)
+      .setLabel(`test1`)
       .setID(`help1`)
-      .setEmoji(`emoji goes here`)
+      .setEmoji(`1️⃣ `)
       .setStyle("blurple");
 
     let button2 = new MessageButton()
-      .setLabel(``)
+      .setLabel(`test2`)
       .setID(`help2`)
-      .setEmoji(`emoji goes here`)
+      .setEmoji(`2️⃣ `)
       .setStyle("blurple");
 
     let button3 = new MessageButton()
-      .setLabel(``)
+      .setLabel(`test3`)
       .setID(`help3`)
-      .setEmoji(`emoji goes here`)
+      .setEmoji(`3️⃣ `)
       .setStyle("blurple");
 
     let button4 = new MessageButton()
-      .setLabel(``)
+      .setLabel(`test4`)
       .setID(`help4`)
-      .setEmoji(`emoji goes here`)
+      .setEmoji(`4️⃣ `)
       .setStyle("blurple");
     //if (!message.member.hasPermission("MANAGE_MESSAGES"))
     //button4.setDisabled(true);
 
     let button5 = new MessageButton()
-      .setLabel(``)
+      .setLabel(`test5`)
       .setID(`help5`)
-      .setEmoji(`emoji goes here`)
+      .setEmoji(`5️⃣ `)
       .setStyle("blurple");
 
     let row = new MessageActionRow().addComponents(
