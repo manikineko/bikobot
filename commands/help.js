@@ -57,7 +57,8 @@ module.exports.help = {
     name:"help"
   }
  const Discord = require("discord.js");
- const { disbut, MessageActionRow, MessageButton } = require("discord-buttons");
+ const { disbut, MessageActionRow, MessageButton } = require("discord.js");
+ module.exports.run  = function(client,message,args){
 
     const embed = new Discord.MessageEmbed()
       .setDescription(
@@ -120,36 +121,31 @@ module.exports.help = {
         message.author.displayAvatarURL()
       );
     let button1 = new MessageButton()
-      .setLabel(``)
-      .setID(`help1`)
+      .setCustomId(`help1`)
       .setEmoji(`<:cmddevonly:874719879729643541>`)
-      .setStyle("blurple");
+      .setStyle("PRIMARY");
 
     let button2 = new MessageButton()
-      .setLabel(``)
-      .setID(`help2`)
+      .setCustomId(`help2`)
       .setEmoji(`<:config:874719879452831785>`)
-      .setStyle("blurple");
+      .setStyle("PRIMARY");
 
     let button3 = new MessageButton()
-      .setLabel(``)
-      .setID(`help3`)
+      .setCustomId(`help3`)
       .setEmoji(`<:voicechannel:874719879729655838>`)
-      .setStyle("blurple");
+      .setStyle("PRIMARY");
 
     let button4 = new MessageButton()
-      .setLabel(``)
-      .setID(`help4`)
+      .setCustomId(`help4`)
       .setEmoji(`<:terminal:874720756997689344>`)
-      .setStyle("blurple");
+      .setStyle("PRIMARY");
     //if (!message.member.hasPermission("MANAGE_MESSAGES"))
     //button4.setDisabled(true);
 
     let button5 = new MessageButton()
-      .setLabel(``)
-      .setID(`help5`)
+      .setCustomId(`help5`)
       .setEmoji(`<:biko:751986462819352626>`)
-      .setStyle("blurple");
+      .setStyle("PRIMARY");
 
     let row = new MessageActionRow().addComponents(
       button1,
@@ -159,39 +155,49 @@ module.exports.help = {
       button5
     );
 
-    const MESSAGE = message.channel.send(embed, row);
+    const MESSAGE = message.channel.send({embeds:[embed], components: [row]} );
 
     const filter = button => button.clicker.user.id === message.author.id;
     //const collector = MESSAGE.createButtonCollector(filter, { time: 120000 });
-    const collector = MESSAGE.createButtonCollector(filter);
+    const collector = message.channel.createMessageComponentCollector(filter);
 
     collector.on("collect", async b => {
       if (b.id == "help1") {
-        MESSAGE.edit(embed1, row);
-        b.reply.defer();
+        await b.deferUpdate();
+        await wait(4000);
+        MESSAGE.edit({embeds:[embed1], components: [row]});
+        await b.reply.defer();
       }
 
       if (b.id == "help2") {
-        MESSAGE.edit(embed2, row);
-        b.reply.defer();
+        await b.deferUpdate();
+        await wait(4000);
+        MESSAGE.edit({embeds:[embed2], components: [row]});
+        await b.reply.defer();
       }
 
       if (b.id == "help3") {
-        MESSAGE.edit(embed3, row);
-        b.reply.defer();
+        await b.deferUpdate();
+        await wait(4000);
+        MESSAGE.edit({embeds:[embed3], components: [row]});
+        await b.reply.defer();
       }
 
       if (b.id == "help4") {
-        MESSAGE.edit(embed4, row);
-        b.reply.defer();
+        await b.deferUpdate();
+        await wait(4000);
+        MESSAGE.edit({embeds:[embed4], components: [row]});
+        await b.reply.defer();
       }
 
       if (b.id == "help5") {
-        MESSAGE.edit(embed5, row);
-        b.reply.defer();
+        await b.deferUpdate();
+        await wait(4000);
+        MESSAGE.edit({embeds:[embed5], components: [row]});
+        await b.reply.defer();
       }
     });
-
+  }
 module.exports.help = {
       name:"help"
     }

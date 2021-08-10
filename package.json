@@ -17,20 +17,20 @@
   },
   "homepage": "https://github.com/bloomsirenix/modbot#readme",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "@google-cloud/speech": "^4.2.0",
     "axios": "^0.21.1",
     "deepai": "^1.0.17",
     "discord-anti-spam": "^2.5.0",
-    "@discordjs/opus": "^0.3.2",
     "discord-interactions": "^2.1.0",
     "discord-together": "^1.1.14",
-    "discord.js": "^13.0.0-dev.e980948de55e91e59c9e3293ac76bc645a058a53",
+    "discord.js": "^13.1.0-dev.1628597267.0062aa6",
     "ffmpeg": "^0.0.4",
     "fluent-ffmpeg": "^2.1.2",
     "gifify": "^2.4.3",
     "gifit": "^0.0.3",
-    "pastebin-ts": "^1.2.0",
     "node-virustotal": "^3.32.0",
+    "pastebin-ts": "^1.2.0",
     "perspective-api-client": "^3.1.0"
   }
 }

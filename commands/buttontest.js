@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   const row = new MessageActionRow()
 			.addComponents(
 				new MessageButton()
-					.setCustomID('test')
+					.setCustomId('test')
 					.setLabel('Test')
 					.setStyle('PRIMARY'),
 			);

@@ -5,19 +5,19 @@ module.exports.run = async (bot, message, args) => {
   /*const row = new MessageActionRow()
 			.addComponents(
 				new MessageButton()
-					.setCustomID('delmsg')
+					.setCustomId('delmsg')
 					.setLabel('❌None❌')
 					.setStyle('PRIMARY'),
 					new MessageButton()
-					.setCustomID('ban')
+					.setCustomId('ban')
 					.setLabel('⛔Ban a User⛔')
 					.setStyle('PRIMARY'),
 					new MessageButton()
-					.setCustomID('kick')
+					.setCustomId('kick')
 					.setLabel('👞Kick a User👞')
 					.setStyle('PRIMARY'),
 				new MessageButton()
-					.setCustomID('lockchannel')
+					.setCustomId('lockchannel')
 					.setLabel('🔒Lock Down Channel🔒')
 					.setStyle('PRIMARY'),
 			);
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
 			const row = new MessageActionRow()
 			.addComponents(
 				new MessageButton()
-					.setCustomID('delmsg')
+					.setCustomId('delmsg')
 					.setLabel('OK')
 					.setStyle('DANGER')
 			); 
