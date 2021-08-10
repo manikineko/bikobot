@@ -9,7 +9,7 @@ module.exports.help = {
     name:"help"
   }
   */
-  const Discord = require('discord.js');
+  /*const Discord = require('discord.js');
   module.exports.run  = function(client,message){
     const helpEmbed = new Discord.MessageEmbed()
     .setColor('#7289da')
@@ -46,4 +46,4 @@ module.exports.help = {
   module.exports.help = {
       name:"help"
     }
-    
+    */
