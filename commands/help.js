@@ -53,14 +53,12 @@ module.exports.help = {
 
 
 
-
-const Discord = require("discord.js");
-const { disbut, MessageActionRow, MessageButton } = require("discord-buttons");
-
 module.exports.help = {
     name:"help"
-  },
-  run: async (client, message, args) => {
+  }
+ const Discord = require("discord.js");
+ const { disbut, MessageActionRow, MessageButton } = require("discord-buttons");
+
     const embed = new Discord.MessageEmbed()
       .setDescription(
         `**__Biko's Help Menu__**\n\n<:cmddevonly:874719879729643541> - Moderation\nemoji here - Utility\nemoji here - Activities\nemoji here - Test\nemoji here - Misc`
@@ -193,8 +191,6 @@ module.exports.help = {
         await b.reply.defer();
       }
     });
-  }
-};
 
 module.exports.help = {
       name:"help"
