@@ -38,7 +38,9 @@ module.exports.help = {
     .setFooter("executed by "+message.author.username, message.author.avatarURL);
   
   message.channel.send(helpEmbed);
-  message.delete();
+  if (message.guild.me.permissions.has("MANAGE_MESSAGES")){
+    message.delete();
+    }
   
   }
   module.exports.help = {

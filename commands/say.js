@@ -14,7 +14,9 @@ module.exports.run  = function(client, message, args){
     .setFooter('Biko', 'https://cdn.discordapp.com/avatars/701541481944711248/16e12aa7d21f5c29309f98681c5ef3b1.png?size=256');
    
 message.channel.send(sayembed)
-message.delete();
+if (message.guild.me.permissions.has("MANAGE_MESSAGES")){
+    message.delete();
+    }
 
 }
 module.exports.help = {

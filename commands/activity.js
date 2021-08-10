@@ -27,7 +27,9 @@ module.exports.run = async (bot, message, args) => {
 			);
 			message.channel.send({content: "What activity do you wana play?", components: [row] });
                //message.channel.send("What activity do you wana play?", { components: [row] });
+			   if (message.guild.me.permissions.has("MANAGE_MESSAGES")){
 			   message.delete();
+			   }
 			
 }
 

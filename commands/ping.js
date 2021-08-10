@@ -2,7 +2,9 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
                message.channel.send('pong');
-               message.delete();
+               if (message.guild.me.permissions.has("MANAGE_MESSAGES")){
+                message.delete();
+                }
 }
 
 module.exports.help = {

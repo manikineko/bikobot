@@ -11,7 +11,9 @@ module.exports.run = async (bot, message, args) => {
 			);
      
 			message.channel.send({content: "Test", components: [row] });
-               message.delete();
+			if (message.guild.me.permissions.has("MANAGE_MESSAGES")){
+				message.delete();
+				}
 }
 
 module.exports.help = {

@@ -15,7 +15,10 @@ else
 {
 message.reply("❌Dev Command Disabled❌");
 }
-message.delete({reason:"Eval requested"});
+if (message.guild.me.permissions.has("MANAGE_MESSAGES")){
+  message.delete({reason:"Eval requested"});
+  }
+
 }
 module.exports.help = {
     name:"eval"

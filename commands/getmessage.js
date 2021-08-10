@@ -13,7 +13,10 @@ else
 }
 else
 {
-  message.reply("🚫Access Denied🚫").delete({ timeout: 10000,reason:"[Automated Message Deletion]" });
+  message.reply("🚫Access Denied🚫")
+  if (message.guild.me.permissions.has("MANAGE_MESSAGES")){
+    message.delete();
+    }
 }
 /*
 message.channel.edit({

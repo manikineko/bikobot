@@ -2,28 +2,19 @@ const Discord = require('discord.js');
 module.exports.run  = function(client,message,args){
 if(message.guild.members.resolve(message.author.id).permissions.has('MANAGE_CHANNELS')||message.guild.members.resolve(message.author.id).permissions.has('ADMINISTRATOR')){
 if(args.length >= 1){
-   message.channel.threads.create({
-    name: `${args[0]}`,
-    autoArchiveDuration: 60,
-    reason: `${args[1]}`,
-  }).then(() => {
-    
-  const thread = message.channel.threads.cache.find(x => x.name === `${args[0]}`);
-  console.log(`Created thread: ${thread.name}`);
-  message.reply(`Created thread: ${thread.name}`);
-  thread.members.add(`${message.author.id}`);
-  })
+
+ message.reply("Command disabled!");
  
 }
 else
 {
-  message.reply("⚠️Channel Made⚠️").delete({ timeout: 10000,reason:"[Automated Message Deletion]" });
+  message.reply("🚫Command Disabled for technical issues🚫")
 }
-message.reply("🪄Channel Made🪄").delete({ timeout: 10000,reason:"[Automated Message Deletion]" });
+message.reply("🚫Command Disabled!🚫")
 }
 else
 {
-  message.reply("🚫Access Denied🚫").delete({ timeout: 10000,reason:"[Automated Message Deletion]" });
+  message.reply("🚫Access Denied🚫")
 }
 /*
 message.channel.edit({
