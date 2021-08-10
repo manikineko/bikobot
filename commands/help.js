@@ -159,7 +159,7 @@ module.exports.help = {
       button5
     );
 
-    const MESSAGE = await message.channel.send(embed, row);
+    const MESSAGE = message.channel.send(embed, row);
 
     const filter = button => button.clicker.user.id === message.author.id;
     //const collector = MESSAGE.createButtonCollector(filter, { time: 120000 });
@@ -168,27 +168,27 @@ module.exports.help = {
     collector.on("collect", async b => {
       if (b.id == "help1") {
         MESSAGE.edit(embed1, row);
-        await b.reply.defer();
+        b.reply.defer();
       }
 
       if (b.id == "help2") {
         MESSAGE.edit(embed2, row);
-        await b.reply.defer();
+        b.reply.defer();
       }
 
       if (b.id == "help3") {
         MESSAGE.edit(embed3, row);
-        await b.reply.defer();
+        b.reply.defer();
       }
 
       if (b.id == "help4") {
         MESSAGE.edit(embed4, row);
-        await b.reply.defer();
+        b.reply.defer();
       }
 
       if (b.id == "help5") {
         MESSAGE.edit(embed5, row);
-        await b.reply.defer();
+        b.reply.defer();
       }
     });
 
