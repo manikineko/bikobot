@@ -63,7 +63,7 @@ module.exports.help = {
   run: async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
       .setDescription(
-        `**__Biko's Help Menu__**\n\nemoji here - Utility\nemoji here - Fun\nemoji here - Misc\nemoji here - Moderation\nemoji here - Activities`
+        `**__Biko's Help Menu__**\n\n<:cmddevonly:874719879729643541> - Moderation\nemoji here - Utility\nemoji here - Activities\nemoji here - Test\nemoji here - Misc`
       )
       .setFooter(
         "React with one of the following emojis to see the avaliable commands for that category!",
@@ -75,7 +75,7 @@ module.exports.help = {
     const embed1 = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setDescription(
-        `emoji here __Utility Commands__ emoji here\n\n• Pu your list of commands here for this category.`
+        `<:cmddevonly:874719879729643541> __Moderation Commands__ <:cmddevonly:874719879729643541>\n\n• Put your list of commands here for this category.`
       )
       .setFooter(
         `Command Requested by: ${message.author.tag}`,
@@ -85,7 +85,7 @@ module.exports.help = {
     const embed2 = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setDescription(
-        `emoji here __Fun Commands__ emoji here\n\n• Put your list of commands here for this category.`
+        `<:config:874719879452831785> __Utility Commands__ <:config:874719879452831785>\n\n• Put your list of commands here for this category.`
       )
       .setFooter(
         `Command Requested by: ${message.author.tag}`,
@@ -95,7 +95,7 @@ module.exports.help = {
     const embed3 = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setDescription(
-        `emoji here __Misc Commands__ emoji here\n\n• Put your list of commands here for this category.`
+        `<:voicechannel:874719879729655838> __Activity Commands__ <:voicechannel:874719879729655838>\n\n• Put your list of commands here for this category.`
       )
       .setFooter(
         `Command Requested by: ${message.author.tag}`,
@@ -105,7 +105,7 @@ module.exports.help = {
     const embed4 = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setDescription(
-        `emoji here __Moderation Commands__ emoji here\n\n• Put your list of commands here for this category.`
+        `<:terminal:874720756997689344> __Test Commands__ <:terminal:874720756997689344>\n\n• Put your list of commands here for this category.`
       )
       .setFooter(
         `Command Requested by: ${message.author.tag}`,
@@ -115,42 +115,42 @@ module.exports.help = {
     const embed5 = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setDescription(
-        `emoji here __Activity Commands__ emoji here\n\n• Put your list of commands here for this category.`
+        `<:biko:751986462819352626> __Misc Commands__ <:biko:751986462819352626>\n\n• Put your list of commands here for this category.`
       )
       .setFooter(
         `Command Requested by: ${message.author.tag}`,
         message.author.displayAvatarURL()
       );
     let button1 = new MessageButton()
-      .setLabel(`test1`)
+      .setLabel(``)
       .setID(`help1`)
-      .setEmoji(`1️⃣ `)
+      .setEmoji(`<:cmddevonly:874719879729643541>`)
       .setStyle("blurple");
 
     let button2 = new MessageButton()
-      .setLabel(`test2`)
+      .setLabel(``)
       .setID(`help2`)
-      .setEmoji(`2️⃣ `)
+      .setEmoji(`<:config:874719879452831785>`)
       .setStyle("blurple");
 
     let button3 = new MessageButton()
-      .setLabel(`test3`)
+      .setLabel(``)
       .setID(`help3`)
-      .setEmoji(`3️⃣ `)
+      .setEmoji(`<:voicechannel:874719879729655838>`)
       .setStyle("blurple");
 
     let button4 = new MessageButton()
-      .setLabel(`test4`)
+      .setLabel(``)
       .setID(`help4`)
-      .setEmoji(`4️⃣ `)
+      .setEmoji(`<:terminal:874720756997689344>`)
       .setStyle("blurple");
     //if (!message.member.hasPermission("MANAGE_MESSAGES"))
     //button4.setDisabled(true);
 
     let button5 = new MessageButton()
-      .setLabel(`test5`)
+      .setLabel(``)
       .setID(`help5`)
-      .setEmoji(`5️⃣ `)
+      .setEmoji(`<:biko:751986462819352626>`)
       .setStyle("blurple");
 
     let row = new MessageActionRow().addComponents(
