@@ -19,7 +19,7 @@ module.exports.buttonresponce = async function(client,interaction)
   )
   .setFooter(
     "React with one of the following emojis to see the avaliable commands for that category!",
-    message.author.displayAvatarURL()
+    interaction.message.author.displayAvatarURL()
   )
   .setTimestamp()
   .setThumbnail(client.user.displayAvatarURL());
@@ -30,8 +30,8 @@ const embed1 = new Discord.MessageEmbed()
     `<:cmddevonly:874719879729643541> __Moderation Commands__ <:cmddevonly:874719879729643541>\n\n• Put your list of commands here for this category.`
   )
   .setFooter(
-    `Command Requested by: ${message.author.tag}`,
-    message.author.displayAvatarURL()
+    `Command Requested by: ${interaction.message.author.tag}`,
+    interaction.message.author.displayAvatarURL()
   );
 
 const embed2 = new Discord.MessageEmbed()
@@ -40,8 +40,8 @@ const embed2 = new Discord.MessageEmbed()
     `<:config:874719879452831785> __Utility Commands__ <:config:874719879452831785>\n\n• Put your list of commands here for this category.`
   )
   .setFooter(
-    `Command Requested by: ${message.author.tag}`,
-    message.author.displayAvatarURL()
+    `Command Requested by: ${interaction.message.author.tag}`,
+    interaction.message.author.displayAvatarURL()
   );
 
 const embed3 = new Discord.MessageEmbed()
@@ -50,8 +50,8 @@ const embed3 = new Discord.MessageEmbed()
     `<:voicechannel:874719879729655838> __Activity Commands__ <:voicechannel:874719879729655838>\n\n• Put your list of commands here for this category.`
   )
   .setFooter(
-    `Command Requested by: ${message.author.tag}`,
-    message.author.displayAvatarURL()
+    `Command Requested by: ${interaction.message.author.tag}`,
+    interaction.message.author.displayAvatarURL()
   );
 
 const embed4 = new Discord.MessageEmbed()
@@ -60,8 +60,8 @@ const embed4 = new Discord.MessageEmbed()
     `<:terminal:874720756997689344> __Test Commands__ <:terminal:874720756997689344>\n\n• Put your list of commands here for this category.`
   )
   .setFooter(
-    `Command Requested by: ${message.author.tag}`,
-    message.author.displayAvatarURL()
+    `Command Requested by: ${interaction.message.author.tag}`,
+    interaction.message.author.displayAvatarURL()
   );
 
 const embed5 = new Discord.MessageEmbed()
@@ -70,8 +70,8 @@ const embed5 = new Discord.MessageEmbed()
     `<:biko:751986462819352626> __Misc Commands__ <:biko:751986462819352626>\n\n• Put your list of commands here for this category.`
   )
   .setFooter(
-    `Command Requested by: ${message.author.tag}`,
-    message.author.displayAvatarURL()
+    `Command Requested by: ${interaction.message.author.tag}`,
+    interaction.message.author.displayAvatarURL()
   );
 let button1 = new MessageButton()
   .setLabel(``)
@@ -123,36 +123,38 @@ const voiceChannel = member.voice.channel;
     default:
       interaction.deferUpdate();
       await interaction.editReply('A unkown button was clicked!', { components: [] });
-
+/*
       case  "help1":
-        interaction.deferUpdate();
-       interaction.editReply({embeds:[embed1], components: [row]});
+        await interaction.deferReply();
+        
+        await interaction.editReply({embeds:[embed1], components: [row]});
       
     break;
     
     case "help2":
-      interaction.deferUpdate();
-       interaction.editReply({embeds:[embed2], components: [row]});
+      await interaction.deferReply();
+      await interaction.editReply({embeds:[embed2], components: [row]});
       
         break;
     
     case "help3":
-      interaction.deferUpdate();
-       interaction.editReply({embeds:[embed3], components: [row]});
+      await interaction.deferReply();
+      await interaction.editReply({embeds:[embed3], components: [row]});
       
         break;
     
     case "help4":
-      interaction.deferUpdate();
-       interaction.editReply({embeds:[embed4], components: [row]});
+      await interaction.deferReply();
+      await interaction.editReply({embeds:[embed4], components: [row]});
       
         break;
     
     case "help5":
-      interaction.deferUpdate();
-       interaction.editReply({embeds:[embed5], components: [row]});
+      await interaction.deferReply();
+      await interaction.editReply({embeds:[embed5], components: [row]});
       
         break;
+        */
       case "youtube":
         interaction.deferUpdate();
         if(member.voice.channel){

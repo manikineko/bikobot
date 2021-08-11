@@ -33,7 +33,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 var client = bot;
 
-bot.on('INTERACTION_CREATE', async interaction => {
+bot.on('interactionCreate', async interaction => {
 	if (interaction.isMessageComponent() && interaction.componentType == 'BUTTON')
   {
     await buttons.buttonresponce(bot,interaction);

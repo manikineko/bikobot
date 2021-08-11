@@ -157,44 +157,55 @@ module.exports.help = {
 
     const MESSAGE = message.channel.send({embeds:[embed], components: [row]} );
 
-    const filter = button => button.clicker.user.id === message.author.id;
+    const filter = i => {
+      i.deferUpdate();
+      return i.user.id === message.author.id;
+    };
     //const collector = MESSAGE.createButtonCollector(filter, { time: 120000 });
-    const collector = message.channel.createMessageComponentCollector(filter);
+    
+    const collector = message.channel.createMessageComponentCollector({ filter,componentType: 'BUTTON', time: 15000 });
+    const wait = require('util').promisify(setTimeout);
 
     collector.on("collect", async b => {
-      if (b.id == "help1") {
-        await b.deferUpdate();
-        await wait(4000);
-        MESSAGE.edit({embeds:[embed1], components: [row]});
-        await b.reply.defer();
+      if (b.customId == "help1") {
+        console.log("help1");
+        await b.deferReply();
+        
+        await b.editReply({embeds:[embed1], components: [row]});
+        
       }
 
-      if (b.id == "help2") {
-        await b.deferUpdate();
-        await wait(4000);
-        MESSAGE.edit({embeds:[embed2], components: [row]});
-        await b.reply.defer();
+      if (b.customId == "help2") {
+        console.log("help2");
+        await b.deferReply();
+        await b.editReply({embeds:[embed2], components: [row]});
+      
       }
 
-      if (b.id == "help3") {
-        await b.deferUpdate();
-        await wait(4000);
-        MESSAGE.edit({embeds:[embed3], components: [row]});
-        await b.reply.defer();
+      if (b.customId == "help3") {
+        console.log("help3");
+        await b.deferReply();
+
+        await b.editReply({embeds:[embed3], components: [row]});
+       
       }
 
-      if (b.id == "help4") {
-        await b.deferUpdate();
-        await wait(4000);
-        MESSAGE.edit({embeds:[embed4], components: [row]});
-        await b.reply.defer();
+      if (b.customId == "help4") {
+        console.log("help4");
+      
+        await b.deferReply();
+
+        await b.editReply({embeds:[embed4], components: [row]});
+       
       }
 
-      if (b.id == "help5") {
-        await b.deferUpdate();
-        await wait(4000);
-        MESSAGE.edit({embeds:[embed5], components: [row]});
-        await b.reply.defer();
+      if (b.customId == "help5") {
+        console.log("help5");
+        await b.deferReply();
+
+
+        await b.editReply({embeds:[embed5], components: [row]});
+       
       }
     });
   }
